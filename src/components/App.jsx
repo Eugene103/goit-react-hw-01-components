@@ -1,16 +1,10 @@
+import {ProfileBoard} from 'components/ProfileBoard/ProfileBoard'
+import  users  from "../user.json";
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      Hello
+    <div>
+      <ProfileBoard users={ users} />
     </div>
   );
 };
