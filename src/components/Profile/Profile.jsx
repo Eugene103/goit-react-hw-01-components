@@ -1,31 +1,34 @@
-import {Conteiner, Description, Avatar, Name, Tag, Location, Stats, Label  } from "./Profile.styled";
+import {Board, Conteiner, Description, Avatar, Name, Tag, Location, Stats, Label  } from "./Profile.styled";
 
-export const Profile = ({name, tag, location, avatar, followers, views, likes }) => {
-    return <Conteiner>
+export const Profile = ({users}) => {
+    return <Board><Conteiner>
         <Description>
             <Avatar
-                src= {avatar}
-                alt= {name}
+                src= {users.avatar}
+                alt= {users.name}
             />
-            <Name>{name}</Name>
-            <Tag>@{tag}</Tag>
-            <Location>{location}</Location>
+            <Name>{users.name}</Name>
+            <Tag>@{users.tag}</Tag>
+            <Location>{users.location}</Location>
         </Description>
         
         <Stats>
             <Label>
                 <span>Followers</span>
-                <span>{followers}</span>
+                <span>{users.stats.followers}</span>
             </Label>
             <Label>
                 <span>Views</span>
-                <span>{views}</span>
+                <span>{users.stats.views}</span>
             </Label>
             <Label>
                 <span>Likes</span>
-                <span>{likes}</span>
+                <span>{users.stats.likes}</span>
             </Label>
         </Stats>
     </Conteiner>
+        </Board>
 }
+
+
 

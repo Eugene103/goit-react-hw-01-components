@@ -12,6 +12,7 @@ background-color: rgb(255, 255, 255);
   margin-left: auto;
   margin-right: auto;
 `;
+
 export const List = styled.ul`
  display: flex;
   width: 245px;

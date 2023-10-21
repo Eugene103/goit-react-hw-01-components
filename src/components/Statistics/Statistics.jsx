@@ -1,8 +1,8 @@
 import { Section, Title, List, Item, Label, Percentage} from "./Statistics.styled";
 
-export const Statistics = ({ data }) => {
+export const Statistics = ({ data, title }) => {
     return (<Section>
-        <Title>Upload stats</Title>
+        {title && <Title name={title}>{title}</Title>}
         <List>
             {data.map(({ id, label, percentage }) => (
                 <Item key={id}>
